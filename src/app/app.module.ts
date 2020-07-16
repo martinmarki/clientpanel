@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 
 import { ClientService } from './services/client.service';
 import { AuthService } from './services/auth.service';
+import { SettingsService } from './services/settings.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -49,7 +50,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     FlashMessagesModule.forRoot(),
   ],
-  providers: [ClientService, AuthService],
+  providers: [ClientService, AuthService, SettingsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

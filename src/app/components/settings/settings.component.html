@@ -1,1 +1,59 @@
-<p>settings works!</p>
+<div class="row">
+  <div class="col-md-6">
+    <a routerLink="/" class="btn btn-dark mb-3">
+      <i class="fa fa-arrow-circle-o-left"> Back to Dashboard</i>
+    </a>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+
+<div class="card">
+  <div class="card-header text-center">
+    Edit Settings
+  </div>
+  <div class="card-body">
+    <form (submit)="onSubmit()">
+      <div class="form-group">
+        <label>Allow Registration</label>
+        <span style="padding-left: 10px;">
+          <input
+            type="checkbox"
+            name="allowRegistration"
+            [checked]="settings.allowRegistration"
+            (change)="settings.allowRegistration = !settings.allowRegistration"
+          />
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label>Disable Balance On Add </label>
+        <span style="padding-left: 10px;">
+          <input
+            type="checkbox"
+            name="disableBalanceOnAdd"
+            [checked]="settings.disableBalanceOnAdd"
+            (change)="
+              settings.disableBalanceOnAdd = !settings.disableBalanceOnAdd
+            "
+          />
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label>Disable Balance On Edit </label>
+        <span style="padding-left: 10px;">
+          <input
+            type="checkbox"
+            name="disableBalanceOnEdit"
+            [checked]="settings.disableBalanceOnEdit"
+            (change)="
+              settings.disableBalanceOnEdit = !settings.disableBalanceOnEdit
+            "
+          />
+        </span>
+      </div>
+
+      <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+    </form>
+  </div>
+</div>
